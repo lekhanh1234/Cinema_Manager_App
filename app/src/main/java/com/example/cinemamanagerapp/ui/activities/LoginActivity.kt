@@ -79,9 +79,9 @@ class LoginActivity : AppCompatActivity() {
                     } ?: run {
                         Toast.makeText(this@LoginActivity, "Đăng nhập thất bại: Không có dữ liệu trả về", Toast.LENGTH_SHORT).show()
                     }
-                } else {
+                } else { // error
                     val errorMessage = response.errorBody()?.string() ?: response.message()
-                    Toast.makeText(this@LoginActivity, "Đăng nhập thất bại: $errorMessage", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@LoginActivity, "Đăng nhập thất bại : $errorMessage", Toast.LENGTH_SHORT).show()
                 }
             }
 
